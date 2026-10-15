@@ -22,33 +22,14 @@ const CFG = {
   port: num(env.PORT, 3000),
   host: env.HOST || '127.0.0.1',
   siteDir: path.resolve(__dirname, env.SITE_DIR || '../simplied-site'),
-  origins: (env.ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean),
   trustProxy: env.TRUST_PROXY === '1',
-  assistant: {
-    email: env.SUPPORT_EMAIL || 'info@simpliedtech.com',
-    timeoutMs: num(env.LLM_TIMEOUT_MS, 9000),
-    dailyLimit: num(env.LLM_DAILY_LIMIT, 1000),
-    maxMessage: 500, maxHistory: 10,
-  },
-  rate: { perMinute: num(env.RATE_PER_MINUTE, 15), perDay: num(env.RATE_PER_DAY, 300) },
   maxBody: 16 * 1024,
 };
 
-const kb = require('./lib/kb').load(path.join(__dirname, 'knowledge'));
-const provider = require('./lib/providers').fromEnv(env);
 const log = (event, data) => { if (env.LOG !== 'off') console.log(JSON.stringify({ t: new Date().toISOString(), event, ...data })); };
-const assistant = require('./lib/assistant').createAssistant({ kb, provider, cfg: CFG.assistant, log });
-
-/* ---------- rate limiting (in memory, per IP) ---------- */
-const hits = new Map();
-function rateLimited(ip) {
-  const now = Date.now(); const h = hits.get(ip) || { min: [], day: 0, dayStart: now };
-  if (now - h.dayStart > 864e5) { h.day = 0; h.dayStart = now; }
-  h.min = h.min.filter(t => now - t < 60e3);
-  if (h.min.length >= CFG.rate.perMinute || h.day >= CFG.rate.perDay) { hits.set(ip, h); return true; }
-  h.min.push(now); h.day++; hits.set(ip, h); return false;
-}
-setInterval(() => { const now = Date.now(); for (const [ip, h] of hits) if (now - h.dayStart > 864e5 && !h.min.length) hits.delete(ip); }, 10 * 60e3).unref();
+// all chat logic (config, knowledge base, LLM provider, rate limit, validation) is shared with the Vercel function
+const chatService = require('./lib/chat-service').createChatService({ env, knowledgeDir: path.join(__dirname, 'knowledge'), log });
+const { kb, assistant } = chatService;
 
 /* ---------- helpers ---------- */
 const SEC = { 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'X-Frame-Options': 'SAMEORIGIN' };
@@ -56,11 +37,6 @@ function send(res, status, body, headers = {}) {
   const isObj = typeof body === 'object' && !Buffer.isBuffer(body);
   res.writeHead(status, { ...SEC, ...(isObj ? { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' } : {}), ...headers });
   res.end(isObj ? JSON.stringify(body) : body);
-}
-function cors(req, res) {
-  const o = req.headers.origin;
-  if (o && CFG.origins.includes(o)) { res.setHeader('Access-Control-Allow-Origin', o); res.setHeader('Vary', 'Origin'); }
-  return !o || CFG.origins.includes(o) || o === `http://${req.headers.host}` || o === `https://${req.headers.host}`;
 }
 const clientIp = req => (CFG.trustProxy && String(req.headers['x-forwarded-for'] || '').split(',')[0].trim()) || req.socket.remoteAddress || '?';
 
@@ -75,22 +51,11 @@ function readBody(req) {
 
 /* ---------- /api/chat ---------- */
 async function chat(req, res) {
-  if (!cors(req, res)) return send(res, 403, { error: 'origin not allowed' });
-  if (!/^application\/json\b/i.test(req.headers['content-type'] || '')) return send(res, 415, { error: 'JSON only' });
-  if (rateLimited(clientIp(req))) return send(res, 429, { error: 'Too many messages. Please wait a moment.' }, { 'Retry-After': '30' });
-  let body;
-  try { body = JSON.parse(await readBody(req)); } catch (e) { return send(res, e.status || 400, { error: e.status === 413 ? 'Message too large' : 'Invalid JSON' }); }
-  if (!body || typeof body.message !== 'string' || !body.message.trim()) return send(res, 400, { error: 'message is required' });
-  if (body.message.length > CFG.assistant.maxMessage) return send(res, 400, { error: `Please keep messages under ${CFG.assistant.maxMessage} characters.` });
-  const history = Array.isArray(body.history) ? body.history.filter(h => h && typeof h.text === 'string' && (h.role === 'user' || h.role === 'assistant')) : [];
-  try {
-    const out = await assistant.respond({ message: body.message, history, state: body.state });
-    send(res, 200, { reply: out.reply, action: out.action, intent: out.intent, quickReplies: out.quickReplies, state: out.state,
-                     escalation: out.escalation, engine: out.engine, degraded: !!out.degraded });
-  } catch (e) {
-    log('error', { where: 'chat', detail: String(e.message).slice(0, 200) });
-    send(res, 500, { error: 'Something went wrong' });
-  }
+  const ct = req.headers['content-type'] || '';
+  let body = null;
+  if (/^application\/json\b/i.test(ct)) { try { body = await readBody(req); } catch (e) { body = e; } }
+  const r = await chatService.handle({ body, ip: clientIp(req), contentType: ct, origin: req.headers.origin, host: req.headers.host });
+  send(res, r.status, r.data, r.headers);
 }
 
 /* ---------- static website ---------- */
@@ -134,11 +99,11 @@ function serveStatic(req, res, pathname) {
 const server = http.createServer((req, res) => {
   const { pathname } = new URL(req.url, 'http://x');
   if (pathname === '/api/chat') {
-    if (req.method === 'OPTIONS') { cors(req, res); return send(res, 204, '', { 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '600' }); }
+    if (req.method === 'OPTIONS') return send(res, 204, '', { ...chatService.corsHeaders(req.headers.origin), 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '600' });
     if (req.method !== 'POST') return send(res, 405, { error: 'POST only' }, { Allow: 'POST' });
     return chat(req, res);
   }
-  if (pathname === '/api/health') return send(res, 200, { ok: true, kbEntries: kb.entries.length, ...assistant.status() });
+  if (pathname === '/api/health') return send(res, 200, chatService.status());
   if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, 'Method not allowed');
   serveStatic(req, res, pathname);
 });
@@ -152,4 +117,4 @@ if (require.main === module) {
     console.log(s.provider ? `LLM: ${s.provider} / ${s.model}` : 'LLM: not configured, using the built-in rules engine (set GEMINI_API_KEY in .env)');
   });
 }
-module.exports = { server, assistant, kb, CFG };
+module.exports = { server, assistant, kb, CFG, chatService };

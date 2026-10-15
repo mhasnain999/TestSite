@@ -97,6 +97,13 @@ Contact details used everywhere: **info@simpliedtech.com**, **+92 331 7734499**.
   See `simplied-qa/README.md`.
 - The user often sends follow-up requests mid-task. Finish the current change cleanly, then do the new one.
 
+## GitHub
+- Repo: **github.com/mhasnain999/TestSite**, **private**, branch `main`. First push was on 2026-10-15.
+- It contains `simplied-site/`, `simplied-server/`, `simplied-qa/` (with the bundled axe-core), `SIMPLIED-CONTEXT.md`, `CLAUDE.md`, a root `README.md` and a `.gitignore` (`.env`, `node_modules` except axe-core, `simplied-qa/out/`, logs).
+- It does **not** contain the other TestF projects or `simplied-video/`. `TestF` itself is not a git repo.
+- To upload changes, copy those folders into a clean staging clone, run a secret scan, then commit and push.
+- **Never store the GitHub token** in files, git config or remote URLs. Ask the user for one each time, or use `gh auth login`.
+
 ## Open items / not done
 - Set `GEMINI_API_KEY` and test the AI against real Gemini.
 - Deployment: the site needs the Node server (or the API on a subdomain plus `aiDetect:false`). Hosting is unknown; ask the user.
