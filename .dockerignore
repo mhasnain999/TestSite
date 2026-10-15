@@ -1,0 +1,10 @@
+.git
+.gitignore
+**/node_modules
+**/.env
+*.log
+simplied-qa
+api
+vercel.json
+*.md
+!simplied-server/knowledge/**
