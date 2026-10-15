@@ -1,0 +1,8 @@
+# secrets — never commit
+.env
+*.env.local
+# generated / installed
+**/node_modules/
+!simplied-qa/tools/node_modules/
+simplied-qa/out/
+*.log

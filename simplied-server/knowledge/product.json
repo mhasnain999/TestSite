@@ -1,0 +1,468 @@
+{
+ "_about": "Verified product facts. Every 'answer' here is taken from the published SimpliEd website (simpliedtech.com). Do not add claims that are not published or confirmed by the SimpliEd team.",
+ "entries": [
+  {
+   "id": "product.what",
+   "module": "general",
+   "kind": "product",
+   "title": "What is SimpliEd",
+   "keywords": [
+    "simplied",
+    "what is",
+    "about",
+    "platform",
+    "school operating system",
+    "overview",
+    "who are you"
+   ],
+   "examples": [
+    "What is SimpliEd?",
+    "Tell me about your product",
+    "What does SimpliEd do?"
+   ],
+   "answer": "**SimpliEd is an all-in-one school operating system.** It unifies admissions, billing, teaching and parent communication into one platform your whole institution can use.\n\n• A Parent app, a Teacher app and a Smart Inbox\n• An admin command center for leaders\n• Built by an educator, engineered for education",
+   "related": [
+    "product.features",
+    "product.apps"
+   ]
+  },
+  {
+   "id": "product.features",
+   "module": "general",
+   "kind": "product",
+   "title": "Main features",
+   "keywords": [
+    "features",
+    "modules",
+    "capabilities",
+    "what can it do",
+    "functions"
+   ],
+   "examples": [
+    "What features do you have?",
+    "Which modules are included?"
+   ],
+   "answer": "SimpliEd covers:\n\n• Admissions & student information\n• Attendance\n• Timetable\n• Fees & billing (with Stripe online payments)\n• Communication (Smart Inbox)\n• LMS, homework & assignments\n• Reports & multi-branch command center\n• AI integration",
+   "related": [
+    "product.fees",
+    "product.comms",
+    "product.lms"
+   ]
+  },
+  {
+   "id": "product.admissions",
+   "module": "admissions",
+   "kind": "product",
+   "title": "Admissions & student information",
+   "keywords": [
+    "admissions",
+    "admission",
+    "enrolment",
+    "enrollment",
+    "student information",
+    "student records",
+    "sis",
+    "student profile"
+   ],
+   "examples": [
+    "Do you handle admissions?",
+    "Can I keep student records?"
+   ],
+   "answer": "SimpliEd brings **admissions and student information** into the same platform as billing, teaching and communication.\n\n• One record per student, shared across every module\n• Multi-branch ready, with campus-wise visibility\n• Less re-typing between separate systems",
+   "related": [
+    "product.reports",
+    "product.fees"
+   ]
+  },
+  {
+   "id": "product.attendance",
+   "module": "attendance",
+   "kind": "product",
+   "title": "Attendance",
+   "keywords": [
+    "attendance",
+    "present",
+    "absent",
+    "late",
+    "register",
+    "roll call"
+   ],
+   "examples": [
+    "How does attendance work?",
+    "Can teachers take attendance on the app?"
+   ],
+   "answer": "**Attendance takes one tap.** Teachers mark Present, Late or Absent from the Teacher app, and parents are told when the teacher presses **Notify parents**.\n\n• Parents see attendance at a glance in their app\n• Leaders see live attendance in the admin command center",
+   "related": [
+    "product.lms",
+    "product.timetable"
+   ]
+  },
+  {
+   "id": "product.timetable",
+   "module": "timetable",
+   "kind": "product",
+   "title": "Timetable",
+   "keywords": [
+    "timetable",
+    "time table",
+    "schedule",
+    "periods",
+    "teaching day"
+   ],
+   "examples": [
+    "Can parents see the timetable?",
+    "Is there a timetable?"
+   ],
+   "answer": "Parents and students see the **timetable at a glance** in the SimpliEd app, and teachers see their **teaching day at a glance**: what's next, which class and which room.",
+   "related": [
+    "product.attendance",
+    "product.lms"
+   ]
+  },
+  {
+   "id": "product.fees",
+   "module": "fees_billing",
+   "kind": "product",
+   "title": "Fees & billing",
+   "keywords": [
+    "fees",
+    "billing",
+    "invoice",
+    "invoices",
+    "payments",
+    "ibft",
+    "reconciliation",
+    "challan",
+    "voucher",
+    "collection",
+    "online payment"
+   ],
+   "examples": [
+    "How does fee collection work?",
+    "Can parents pay online?",
+    "Do you reconcile bank transfers?"
+   ],
+   "answer": "SimpliEd's **automated billing** is built for schools:\n\n• Generate fee invoices for a student, a class or an entire campus in one click\n• Every parent gets an instant push notification\n• Every IBFT and online payment reconciles automatically to the right student and branch\n• Remind pending families in one tap\n• Secure online payments via the **Stripe** integration",
+   "related": [
+    "product.comms",
+    "product.reports"
+   ]
+  },
+  {
+   "id": "product.comms",
+   "module": "communication",
+   "kind": "product",
+   "title": "Communication (Smart Inbox)",
+   "keywords": [
+    "communication",
+    "smart inbox",
+    "inbox",
+    "whatsapp",
+    "messages",
+    "announcements",
+    "circulars",
+    "notifications",
+    "parents chat"
+   ],
+   "examples": [
+    "How do you replace WhatsApp groups?",
+    "Can we send announcements to parents?"
+   ],
+   "answer": "The **SimpliEd Smart Inbox** replaces scattered WhatsApp groups with one secure, school-owned channel:\n\n• Category routing to the right conversation\n• Auto-escalation when no one replies\n• Full admin transparency on every thread\n• Circulars, news and events on one home screen\n• Instant announcements with read receipts",
+   "related": [
+    "product.fees",
+    "product.attendance"
+   ]
+  },
+  {
+   "id": "product.lms",
+   "module": "lms",
+   "kind": "product",
+   "title": "LMS, homework & assignments",
+   "keywords": [
+    "lms",
+    "homework",
+    "assignments",
+    "lessons",
+    "lesson plans",
+    "grading",
+    "results",
+    "curriculum",
+    "learning",
+    "submissions"
+   ],
+   "examples": [
+    "Do you support homework and assignments?",
+    "Is there an LMS?"
+   ],
+   "answer": "The built-in **LMS** keeps learning in one place:\n\n• Lessons, resources, homework and assignments\n• Lesson plans, class streams and materials\n• Track every submission: assigned, submitted, graded\n• Digital grading and automated results",
+   "related": [
+    "product.attendance",
+    "product.timetable"
+   ]
+  },
+  {
+   "id": "product.reports",
+   "module": "general",
+   "kind": "product",
+   "title": "Reports, insights & multi-branch",
+   "keywords": [
+    "reports",
+    "insights",
+    "dashboard",
+    "analytics",
+    "branches",
+    "multi branch",
+    "campuses",
+    "command center",
+    "admin"
+   ],
+   "examples": [
+    "We have several branches, can we see them all?",
+    "Do you have dashboards?"
+   ],
+   "answer": "Leaders run the whole school from **one command center**:\n\n• Attendance, announcements, LMS, billing and insights in one place\n• Real-time, branch-wise visibility and control\n• Live insights so principals and owners act on facts, not guesswork",
+   "related": [
+    "product.admissions",
+    "product.fees"
+   ]
+  },
+  {
+   "id": "product.apps",
+   "module": "general",
+   "kind": "product",
+   "title": "Apps for each role",
+   "keywords": [
+    "app",
+    "apps",
+    "mobile",
+    "android",
+    "ios",
+    "parent app",
+    "teacher app",
+    "student app",
+    "roles"
+   ],
+   "examples": [
+    "Is there a mobile app?",
+    "What do parents get?"
+   ],
+   "answer": "SimpliEd gives every role a focused view:\n\n• **Parents**: circulars, attendance, timetable, fees and results; multiple children from one login\n• **Teachers**: teaching day, attendance, lesson plans, digital grading\n• **Students**: timetable and learning\n• **Admin**: the full command center",
+   "related": [
+    "product.features"
+   ]
+  },
+  {
+   "id": "product.ai",
+   "module": "general",
+   "kind": "product",
+   "title": "AI integration",
+   "keywords": [
+    "ai",
+    "artificial intelligence",
+    "automation",
+    "smart"
+   ],
+   "examples": [
+    "Does SimpliEd use AI?"
+   ],
+   "answer": "SimpliEd includes **AI integration**: AI-assisted insights and smart automation built into everyday school workflows, so your team spends less time on routine work.\n\nOur team can show exactly how it works in a demo.",
+   "related": [
+    "product.features"
+   ]
+  },
+  {
+   "id": "product.integrations",
+   "module": "general",
+   "kind": "product",
+   "title": "Integrations",
+   "keywords": [
+    "integration",
+    "integrations",
+    "stripe",
+    "api",
+    "connect",
+    "sync"
+   ],
+   "examples": [
+    "Does it integrate with Stripe?",
+    "Can it connect to our accounting system?"
+   ],
+   "answer": "SimpliEd supports **secure online payments via Stripe**, and every IBFT and online payment reconciles automatically.\n\nFor other systems you'd like to connect, our team can confirm what's possible for your school.",
+   "related": [
+    "product.fees"
+   ]
+  },
+  {
+   "id": "product.security",
+   "module": "general",
+   "kind": "product",
+   "title": "Security & privacy",
+   "keywords": [
+    "security",
+    "secure",
+    "privacy",
+    "data protection",
+    "safe",
+    "gdpr",
+    "hosting"
+   ],
+   "examples": [
+    "Is our data safe?",
+    "Where is data hosted?"
+   ],
+   "answer": "Communication runs through **one secure, school-owned channel** instead of personal WhatsApp groups, and admins have full transparency on every thread.\n\nFor detailed questions about data security and hosting, our team can give you accurate answers.",
+   "related": []
+  },
+  {
+   "id": "product.founder",
+   "module": "general",
+   "kind": "product",
+   "title": "Founder",
+   "keywords": [
+    "founder",
+    "founded",
+    "who built",
+    "who made",
+    "rehman",
+    "minhas",
+    "harvard",
+    "columbia",
+    "educator"
+   ],
+   "examples": [
+    "Who founded SimpliEd?"
+   ],
+   "answer": "SimpliEd was founded by **Mr. Rehman Minhas**, an educator with a Masters in Educational Leadership from **Harvard University** and a Masters in Private School Leadership from **Columbia University**.\n\nHis goal: world-class systems for every school, and leadership driven by data.",
+   "related": [
+    "product.what"
+   ]
+  },
+  {
+   "id": "product.clients",
+   "module": "general",
+   "kind": "product",
+   "title": "Customers",
+   "keywords": [
+    "clients",
+    "customers",
+    "who uses",
+    "testimonials",
+    "reviews",
+    "schools using"
+   ],
+   "examples": [
+    "Which schools use SimpliEd?"
+   ],
+   "answer": "SimpliEd is used by schools from single campuses to multi-branch school groups, including **Foundation Public School**, **Head Start School**, **Willow Academy**, **Building Blocks** and **Prime Blessings**.",
+   "related": [
+    "product.impact"
+   ]
+  },
+  {
+   "id": "product.impact",
+   "module": "general",
+   "kind": "product",
+   "title": "Results after implementation",
+   "keywords": [
+    "impact",
+    "results",
+    "statistics",
+    "stats",
+    "roi",
+    "benefits",
+    "improvement"
+   ],
+   "examples": [
+    "What results do schools see?"
+   ],
+   "answer": "Schools report these results after implementation (as published on our website):\n\n• On-time fee collection **up 46%**\n• IT cost **down 53%**\n• Operational cost **down 30%**\n• New students **up 33%**",
+   "related": [
+    "product.clients"
+   ]
+  },
+  {
+   "id": "product.pricing",
+   "module": "general",
+   "kind": "policy",
+   "title": "Pricing",
+   "keywords": [
+    "price",
+    "pricing",
+    "cost",
+    "how much",
+    "subscription",
+    "plan",
+    "plans",
+    "quote",
+    "package",
+    "charges"
+   ],
+   "examples": [
+    "How much does it cost?",
+    "What are your plans?"
+   ],
+   "answer": "Pricing depends on your school's size and the modules you need, so I don't want to guess a number.\n\nThe quickest way to get an accurate quote is a short demo with our team.",
+   "handoff": "demo",
+   "related": []
+  },
+  {
+   "id": "handoff.demo",
+   "module": "demo",
+   "kind": "handoff",
+   "title": "Book a demo",
+   "keywords": [
+    "demo",
+    "book",
+    "walkthrough",
+    "trial",
+    "meeting",
+    "appointment",
+    "see it live"
+   ],
+   "examples": [
+    "I want a demo",
+    "Can I book a walkthrough?"
+   ],
+   "answer": null,
+   "handoff": "demo",
+   "related": []
+  },
+  {
+   "id": "handoff.contact",
+   "module": "contact",
+   "kind": "handoff",
+   "title": "Talk to the team",
+   "keywords": [
+    "talk",
+    "speak",
+    "human",
+    "agent",
+    "person",
+    "someone",
+    "contact",
+    "call",
+    "phone",
+    "email",
+    "sales",
+    "representative",
+    "support team",
+    "already use simplied",
+    "existing customer",
+    "our account",
+    "need support",
+    "customer support",
+    "support request"
+   ],
+   "examples": [
+    "Can I talk to a human?",
+    "How do I contact you?",
+    "We already use SimpliEd and need support",
+    "I am an existing customer with a problem in our account"
+   ],
+   "answer": null,
+   "handoff": "contact",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "simplied-assistant-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SimpliEd website + AI chatbot backend (Gemini, swappable). No dependencies.",
+  "main": "server.js",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

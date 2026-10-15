@@ -1,0 +1,500 @@
+{
+ "_about": "Problem -> SimpliEd service -> result. Visitors describe a problem; the assistant explains which SimpliEd service solves it, what that results in, then invites them to a demo. EVERY sentence here comes from the published website (simpliedtech.com): features, customer stories and the 'Latest Statistics After Implementation'. Add or change claims only with wording the SimpliEd team has approved.",
+ "entries": [
+  {
+   "id": "sol.fees",
+   "module": "fees_billing",
+   "kind": "solution",
+   "title": "Fee collection",
+   "service": "Automated billing",
+   "keywords": [
+    "fees",
+    "fee collection",
+    "pending fees",
+    "late fees",
+    "defaulters",
+    "chasing parents",
+    "reconciliation",
+    "ibft",
+    "payments not matching",
+    "invoices",
+    "vouchers",
+    "challan",
+    "billing",
+    "dues",
+    "payment not showing",
+    "invoice wrong",
+    "fee issue"
+   ],
+   "examples": [
+    "Parents pay late and we keep chasing them",
+    "IBFT payments don't match",
+    "Making fee vouchers takes days",
+    "Parent paid but it still shows unpaid",
+    "Our fee collection is a mess",
+    "Fee issue"
+   ],
+   "answer": "SimpliEd's **automated billing** takes the manual work out of fees:\n\n• Generate fee invoices for a student, a class or an entire campus in one click\n• Every parent gets an instant push notification, invoice to parent in under 3 seconds\n• Every payment is auto-matched to the right student and branch\n• Secure online payments via **Stripe**",
+   "results": [
+    "Schools report on-time fee collection up 46% after moving to SimpliEd",
+    "Foundation Public School: fees now reconcile automatically and accurately across every branch"
+   ],
+   "related": [
+    "sol.parents",
+    "sol.branches"
+   ]
+  },
+  {
+   "id": "sol.comms",
+   "module": "communication",
+   "kind": "solution",
+   "title": "Parent communication",
+   "service": "SimpliEd Smart Inbox",
+   "keywords": [
+    "whatsapp",
+    "whatsapp groups",
+    "too many groups",
+    "messages lost",
+    "parents not reading",
+    "circulars",
+    "announcements",
+    "communication",
+    "teachers messaged at night",
+    "parent complaints",
+    "phone storage",
+    "message not delivered",
+    "parents not receiving"
+   ],
+   "examples": [
+    "We manage dozens of WhatsApp groups",
+    "Parents miss important announcements",
+    "Teachers get parent messages all evening",
+    "Messages get lost",
+    "Parents aren't receiving announcements"
+   ],
+   "answer": "The **SimpliEd Smart Inbox** replaces WhatsApp groups with one secure, monitored, school-owned channel:\n\n• Category routing sends every message to the right conversation\n• Auto-escalation when no one replies\n• Full admin transparency on every thread\n• Circulars, news and events on one home screen in the Parent app",
+   "results": [
+    "Head Start School: every message reaches the right person, nothing gets lost, and teachers are no longer on call all evening"
+   ],
+   "related": [
+    "sol.parents",
+    "sol.attendance"
+   ]
+  },
+  {
+   "id": "sol.attendance",
+   "module": "attendance",
+   "kind": "solution",
+   "title": "Attendance",
+   "service": "Attendance tracking",
+   "keywords": [
+    "attendance",
+    "registers",
+    "paper register",
+    "roll call",
+    "absent",
+    "absence",
+    "late",
+    "attendance errors",
+    "attendance not working",
+    "can't mark attendance",
+    "attendance wrong",
+    "parents not informed absent",
+    "teacher attendance"
+   ],
+   "examples": [
+    "Attendance is still on paper registers",
+    "Parents don't know when their child is absent",
+    "Taking attendance wastes class time",
+    "Teacher attendance isn't working",
+    "Attendance records are wrong"
+   ],
+   "answer": "With SimpliEd, attendance is **real-time**:\n\n• Teachers mark attendance in a tap from the Teacher app\n• Mark, monitor and report attendance in real time\n• Instant absence alerts to parents\n• Leaders see attendance live in the admin command center",
+   "results": [
+    "Willow Academy: teachers mark attendance in a tap and grade digitally"
+   ],
+   "related": [
+    "sol.teachers",
+    "sol.comms"
+   ]
+  },
+  {
+   "id": "sol.teachers",
+   "module": "teacher_management",
+   "kind": "solution",
+   "title": "Teacher workload",
+   "service": "SimpliEd Teacher App",
+   "keywords": [
+    "teacher",
+    "teachers",
+    "teacher issue",
+    "teacher problem",
+    "teacher workload",
+    "overworked teachers",
+    "grading",
+    "marking copies",
+    "results take long",
+    "report cards",
+    "lesson plans",
+    "teachers busy",
+    "teacher burnout",
+    "diary"
+   ],
+   "examples": [
+    "Teacher issue",
+    "Our teachers are overloaded",
+    "Compiling results takes days",
+    "Lesson plans are all over the place",
+    "Teachers spend hours checking copies"
+   ],
+   "answer": "The **SimpliEd Teacher App** puts everything a teacher needs in one app:\n\n• Their teaching day at a glance\n• Lesson plans, class streams and materials\n• Digital grading and automated results\n• Attendance in a tap\n• Monitored, guided parent messaging",
+   "results": [
+    "Willow Academy: results that used to take days to compile are ready automatically, and lesson plans finally live in one place"
+   ],
+   "related": [
+    "sol.attendance",
+    "sol.learning"
+   ]
+  },
+  {
+   "id": "sol.staff",
+   "module": "teacher_management",
+   "kind": "solution",
+   "title": "Teacher & staff records",
+   "service": "One connected platform with role-based access",
+   "keywords": [
+    "add teacher",
+    "teacher not showing",
+    "teacher missing from list",
+    "teacher details",
+    "staff records",
+    "staff list",
+    "teacher login",
+    "teacher can't log in",
+    "teacher information",
+    "hr records"
+   ],
+   "examples": [
+    "Sir's name is not showing in the list",
+    "I can't add a teacher",
+    "I need to change a teacher's details",
+    "The teacher cannot log in",
+    "Teacher isn't appearing"
+   ],
+   "answer": "In SimpliEd, staff and academics live in **one connected platform** instead of separate tools and lists:\n\n• Every teacher gets their own role-based Teacher app, showing exactly what matters to them\n• Admin manage everything from one command center: attendance, announcements, LMS, billing and insights\n• Real-time, branch-wise visibility and control",
+   "results": [
+    "Prime Blessings: one platform with real-time, campus-wise visibility and far less manual effort"
+   ],
+   "related": [
+    "sol.teachers",
+    "sol.branches"
+   ]
+  },
+  {
+   "id": "sol.records",
+   "module": "student_management",
+   "kind": "solution",
+   "title": "Admissions & student records",
+   "service": "SIS & admissions in one platform",
+   "keywords": [
+    "admissions",
+    "admission forms",
+    "student records",
+    "student data",
+    "enrolment",
+    "enrollment",
+    "student not showing",
+    "add student",
+    "student details",
+    "files",
+    "spreadsheets",
+    "excel",
+    "paperwork",
+    "sis",
+    "student information"
+   ],
+   "examples": [
+    "Admissions are on paper",
+    "Student records are in spreadsheets",
+    "A student isn't showing in the class list",
+    "We re-type student data everywhere"
+   ],
+   "answer": "SimpliEd brings **SIS, admissions, billing, teaching and communication into a single connected platform**:\n\n• Student information and admissions in the same system as fees, attendance and the LMS\n• Parents manage multiple children from one login\n• Multi-branch ready, with campus-wise visibility",
+   "results": [
+    "Schools report new students up 33% after moving to SimpliEd",
+    "Prime Blessings: admissions, attendance, billing and communication unified in one platform"
+   ],
+   "related": [
+    "sol.branches",
+    "sol.fees"
+   ]
+  },
+  {
+   "id": "sol.branches",
+   "module": "general",
+   "kind": "solution",
+   "title": "Multiple branches",
+   "service": "Admin command center",
+   "keywords": [
+    "branches",
+    "multiple campuses",
+    "multi campus",
+    "separate systems",
+    "no visibility",
+    "branch reports",
+    "transfer between branches",
+    "inter branch",
+    "campus transfer",
+    "head office",
+    "group of schools",
+    "chains"
+   ],
+   "examples": [
+    "We have 5 branches and no single view",
+    "Each campus uses a different system",
+    "Move a student to another branch",
+    "Head office can't see branch performance"
+   ],
+   "answer": "SimpliEd lets you **run every campus from one place**:\n\n• Real-time, branch-wise visibility and control\n• Attendance, announcements, LMS, billing and insights in one command center\n• One platform replaces fragmented tools across admin, finance and academics",
+   "results": [
+    "Prime Blessings: separate systems unified into one platform, with real-time, campus-wise visibility and far less manual effort",
+    "Schools report IT cost down 53% and operational cost down 30% after moving to SimpliEd"
+   ],
+   "related": [
+    "sol.insights",
+    "sol.fees"
+   ]
+  },
+  {
+   "id": "sol.parents",
+   "module": "general",
+   "kind": "solution",
+   "title": "Parent experience",
+   "service": "SimpliEd Parent App",
+   "keywords": [
+    "parents calling",
+    "front office",
+    "too many calls",
+    "parent complaints",
+    "parents confused",
+    "parents don't know",
+    "multiple children",
+    "parent app",
+    "parents can't see fees",
+    "parent login"
+   ],
+   "examples": [
+    "Parents keep calling the front office",
+    "Parents don't know their child's timetable",
+    "Parents with three kids have three logins",
+    "A parent can't log in"
+   ],
+   "answer": "The **SimpliEd Parent App** puts your child's school in your pocket:\n\n• Circulars, news and events on one home screen\n• Attendance and timetable at a glance\n• Online billing, every payment auto-reconciled\n• Multiple children from one login",
+   "results": [
+    "Building Blocks: fee invoices reach every parent in seconds, and the front office spends far less time on calls and follow-ups"
+   ],
+   "related": [
+    "sol.comms",
+    "sol.fees"
+   ]
+  },
+  {
+   "id": "sol.learning",
+   "module": "lms",
+   "kind": "solution",
+   "title": "Homework & curriculum",
+   "service": "User-friendly LMS & curriculum management",
+   "keywords": [
+    "homework",
+    "assignments",
+    "lms",
+    "curriculum",
+    "syllabus",
+    "learning",
+    "online classes",
+    "resources",
+    "submissions",
+    "homework not showing",
+    "curriculum planning",
+    "learning outcomes"
+   ],
+   "examples": [
+    "We can't track homework",
+    "Our curriculum planning is scattered",
+    "Students can't see the homework",
+    "We need an LMS"
+   ],
+   "answer": "SimpliEd includes a **user-friendly LMS** and **curriculum management**:\n\n• Lessons, resources, assignments and grading in one clean interface\n• Plan, structure and track your curriculum, mapped to classes, terms and learning outcomes\n• Digital grading and automated results",
+   "results": [
+    "Willow Academy: results are ready automatically, and lesson plans finally live in one place"
+   ],
+   "related": [
+    "sol.teachers",
+    "sol.insights"
+   ]
+  },
+  {
+   "id": "sol.timetable",
+   "module": "timetable",
+   "kind": "solution",
+   "title": "Timetables",
+   "service": "Timetable in every app",
+   "keywords": [
+    "timetable",
+    "schedule",
+    "periods",
+    "timetable confusion",
+    "timetable not showing",
+    "teachers don't know their classes"
+   ],
+   "examples": [
+    "Parents don't know the timetable",
+    "Teachers are confused about their periods",
+    "The timetable isn't showing"
+   ],
+   "answer": "In SimpliEd, everyone sees the schedule that matters to them:\n\n• Parents and students see the **timetable at a glance**\n• Teachers see their **teaching day at a glance**",
+   "results": [
+    "Each role gets a focused view, so everyone sees exactly what matters to them"
+   ],
+   "related": [
+    "sol.teachers",
+    "sol.parents"
+   ]
+  },
+  {
+   "id": "sol.insights",
+   "module": "general",
+   "kind": "solution",
+   "title": "Data-driven decisions",
+   "service": "Live insights & AI integration",
+   "keywords": [
+    "reports",
+    "insights",
+    "data",
+    "decisions",
+    "guesswork",
+    "analytics",
+    "dashboard",
+    "kpis",
+    "no reports",
+    "ai",
+    "automation",
+    "routine work"
+   ],
+   "examples": [
+    "We make decisions on guesswork",
+    "We have no reports",
+    "Can AI help our school?",
+    "Too much routine admin work"
+   ],
+   "answer": "SimpliEd gives leaders **live insights** in one command center, plus **AI integration**:\n\n• Real-time insight so principals and owners act on facts, not guesswork\n• AI-assisted insights and smart automation built into everyday workflows\n• Your team spends less time on routine work",
+   "results": [
+    "Schools report operational cost down 30% after moving to SimpliEd"
+   ],
+   "related": [
+    "sol.branches",
+    "sol.transform"
+   ]
+  },
+  {
+   "id": "sol.fragmented",
+   "module": "general",
+   "kind": "solution",
+   "title": "Too many systems",
+   "service": "One all-in-one school operating system",
+   "keywords": [
+    "too many apps",
+    "too many systems",
+    "disconnected",
+    "fragmented",
+    "messy software",
+    "it cost",
+    "expensive software",
+    "multiple logins",
+    "old erp",
+    "current software is bad",
+    "clunky",
+    "switch from"
+   ],
+   "examples": [
+    "We use five different systems",
+    "Our software is clunky and expensive",
+    "Our old ERP is confusing",
+    "IT costs are too high"
+   ],
+   "answer": "SimpliEd **replaces fragmented tools with one system** across admin, finance and academics:\n\n• SIS, admissions, billing, teaching and communication in a single connected platform\n• A focused, role-based app for parents, students, teachers and admin\n• Designed to be super user friendly",
+   "results": [
+    "Schools report IT cost down 53% and operational cost down 30% after moving to SimpliEd"
+   ],
+   "related": [
+    "sol.branches",
+    "sol.insights"
+   ]
+  },
+  {
+   "id": "sol.transform",
+   "module": "general",
+   "kind": "solution",
+   "title": "School transformation",
+   "service": "The SimpliEd approach to school transformation",
+   "keywords": [
+    "transformation",
+    "change",
+    "modernise",
+    "modernize",
+    "digital transformation",
+    "where to start",
+    "ai ready",
+    "improve our school",
+    "grow our school",
+    "compete"
+   ],
+   "examples": [
+    "We want to modernise our school but don't know where to start",
+    "How do we get our school AI-ready?",
+    "How can we grow our school?"
+   ],
+   "answer": "SimpliEd is built around a four-step framework for leading change:\n\n• **Scope:** understand where your school stands today\n• **Shape:** design the strategy, culture and systems\n• **Influence:** bring staff, parents and leaders along\n• **Align:** embed change into daily operations so it sticks",
+   "results": [
+    "Schools report new students up 33% and on-time fee collection up 46% after moving to SimpliEd"
+   ],
+   "related": [
+    "sol.insights",
+    "sol.fragmented"
+   ]
+  },
+  {
+   "id": "sol.unlisted",
+   "module": "general",
+   "kind": "solution",
+   "title": "Other admin tasks",
+   "service": "One connected school platform",
+   "keywords": [
+    "id card",
+    "id cards",
+    "student card",
+    "academic hold",
+    "result withheld",
+    "hold",
+    "certificates",
+    "discount",
+    "concession",
+    "sibling discount",
+    "refund",
+    "invoice adjustment",
+    "waiver",
+    "scholarship"
+   ],
+   "examples": [
+    "How do you handle ID cards?",
+    "Can we put a student's result on hold?",
+    "We need sibling discounts on invoices"
+   ],
+   "answer": "I can't confirm the details of that specific task here, so I won't guess. What I can say: SimpliEd brings **SIS, admissions, billing, teaching and communication into one connected platform**, so school admin happens in one place instead of separate tools.",
+   "results": [],
+   "related": [
+    "sol.fragmented"
+   ]
+  }
+ ]
+}
