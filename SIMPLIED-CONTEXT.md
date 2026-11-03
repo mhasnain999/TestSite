@@ -42,7 +42,7 @@ The nav (`#nav`) holds: Why SimpliEd · Product · Approach · Impact · Compare
    - On phones it auto-rotates. Both phone columns share one subgrid, so they always align. The competitor mock is laid out at 282px and scaled to fit (`--csk`).
 10. **Testimonials** `#testimonials`: a carousel of five schools.
 11. **Trust** `#trust`: client logos.
-12. **Promise** `#contact` (`.finisher`): "Built by an Educator. / Engineered for Education. / Designed for What's Next."
+12. **Promise** `#contact` (`.finisher`): "Built by Educators. / Engineered for Education. / Designed for What's Next."
     - Its button is **"Schedule a Demo"** (`#endCta`). It is the only CTA with that wording; every other one says "Book a Demo".
     - The top and bottom edges are **smooth navy waves** (seamless SVG mask in `::before` / `::after`).
 13. **Contact Us** `#get-in-touch`: an illustrated decision-maker panel and a short form.
@@ -103,6 +103,13 @@ Contact details used everywhere: **info@simpliedtech.com**, **+92 331 7734499**.
 - It does **not** contain the other TestF projects or `simplied-video/`. `TestF` itself is not a git repo.
 - To upload changes, copy those folders into a clean staging clone, run a secret scan, then commit and push.
 - **Never store the GitHub token** in files, git config or remote URLs. Ask the user for one each time, or use `gh auth login`.
+
+## Recent content changes (phone screens, logo, phones)
+- Phone-screen images are the `*2_scr`/`*3_scr` webp sets in `assets/` (hero, roles: Billing/Timetable/Gradebook/Admin, Built for Speed: Explore, Compare: Attendance/Inbox/Curriculum), padded (not cropped) to the phone aspect 0.4432.
+- Why SimpliEd (`#why`) nine cards and Approach (`#transform`) "SimpliEd delivers this" cards use inline Lucide-style line SVGs (the mobile app uses `lucide_icons`), not emoji.
+- Header and footer use the white logo `assets/brand-logo.webp`.
+- The only visible phone number is **+92 331 7734499** (contact card and footer). The landline and +92 309 2442950 are commented out in the HTML. www.simpliedtech.com was removed from the footer.
+- `simplied-caprover.tar` (repo root) is the CapRover bundle; rebuild it after edits.
 
 ## Open items / not done
 - Set `GEMINI_API_KEY` and test the AI against real Gemini.

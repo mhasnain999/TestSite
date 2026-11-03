@@ -207,7 +207,7 @@
       switch (id) {
         case 'menu': await bot('Sure - what would you like to know?'); return chips(MAIN);
         case 'what':
-          await bot("**SimpliEd is an all-in-one school operating system.** It unifies admissions, billing, teaching and parent communication into one platform your whole institution can use.\n\n• A Parent app, a Teacher app and a Smart Inbox\n• An admin command center for leaders\n• Built by an educator, engineered for education");
+          await bot("**SimpliEd is an all-in-one school operating system.** It unifies admissions, billing, teaching and parent communication into one platform your whole institution can use.\n\n• A Parent app, a Teacher app and a Smart Inbox\n• An admin command center for leaders\n• Built by educators, engineered for education");
           return chips([{ id: 'features', label: 'Explore features' }, { id: 'help', label: 'How can it help my school?' }, DEMO]);
         case 'features':
           await bot('Here are the main areas SimpliEd covers. Pick one to learn more:');

@@ -11,6 +11,9 @@ WORKDIR /app
 COPY simplied-server ./simplied-server
 COPY simplied-site ./simplied-site
 
+# macOS tarballs can carry AppleDouble ._* files; the KB loader would try to parse them as JSON
+RUN find /app -name '._*' -delete
+
 WORKDIR /app/simplied-server
 EXPOSE 80
 

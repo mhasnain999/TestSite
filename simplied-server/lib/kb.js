@@ -11,7 +11,7 @@ const MODULES = ['teacher_management', 'student_management', 'admissions', 'atte
 
 function load(dir) {
   const entries = [];
-  for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()) {
+  for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json') && !f.startsWith('.')).sort()) {
     const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
     for (const e of data.entries || []) entries.push(e);
   }

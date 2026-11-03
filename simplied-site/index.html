@@ -4,11 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>SimpliEd - All-in-One School Operating System for Modern Schools</title>
-<meta name="description" content="SimpliEd unifies fragmented school operations into one powerful platform. Built by an educator. Engineered for education. Designed for what's next." />
+<meta name="description" content="SimpliEd unifies fragmented school operations into one powerful platform. Built by educators. Engineered for education. Designed for what's next." />
 <link rel="icon" type="image/png" sizes="48x48" href="assets/brand/favicon-48.png" />
 <!-- non-critical CSS loads without blocking the first paint -->
-<link rel="stylesheet" href="assets/chatbot.css" media="print" onload="this.media='all'" />
-<noscript><link rel="stylesheet" href="assets/chatbot.css" /></noscript>
+<link rel="stylesheet" href="assets/chatbot.css?v=7" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="assets/chatbot.css?v=7" /></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap">
@@ -95,8 +95,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s;padding:16px 
 nav.scrolled{background:rgba(13,2,48,.85);backdrop-filter:blur(14px);padding:8px 0;box-shadow:0 4px 24px rgba(0,0,0,.25)}
 .nav-in{display:flex;align-items:center;justify-content:space-between}
 .nav-home{display:inline-flex;align-items:center;min-height:44px;border-radius:12px}
-.nav-logo{height:44px;display:block}
-@media(min-width:861px){.nav-logo{height:66px}}
+.nav-logo{height:26px;width:auto;display:block}
+@media(min-width:861px){.nav-logo{height:38px}}
 .nav-links{display:flex;gap:6px;align-items:center}
 .nav-links a{color:rgba(255,255,255,.82);font-size:14.5px;font-weight:500;transition:.2s;padding:10px 11px;min-height:44px;display:inline-flex;align-items:center;border-radius:999px}
 .nav-links a:not(.nav-cta):hover{color:#fff;background:rgba(255,255,255,.07)}
@@ -160,6 +160,7 @@ nav.open .nav-toggle span::after{transform:translateY(-6px) rotate(-45deg)}
 .device2 .scr::after{content:"";position:absolute;z-index:9;top:2.3cqw;left:50%;transform:translateX(-50%);width:27cqw;height:7.8cqw;border-radius:999px;background:#000;pointer-events:none}
 .device2 .scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity .55s ease}
 .device2 .scr img.active{opacity:1}
+@media (max-width:860px){.hero-phone2 .scr img.intro{display:none}}
 .tour-dots{display:none}
 /* desktop: the tour copy is display-only and overlays the hero CTAs while invisible - never let it take clicks */
 @media(min-width:861px){.tour-copy,.tour-copy *{pointer-events:none!important}.rs-ic{display:none}.tour-copy .loop-copy{display:none}}
@@ -215,6 +216,7 @@ section.block{padding:100px 0}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-card);padding:28px;box-shadow:var(--shadow-sm);transition:.3s;text-align:left}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:16px;background:var(--tint)}
+.card .ic svg{width:1.15em;height:1.15em;color:var(--accent,#4361ee)}
 .card h3{font-size:var(--fs-card-title);margin-bottom:8px}
 .card p{font-size:var(--fs-card-body);color:var(--mut);line-height:var(--lh-body)}
 @media(max-width:860px){.why-grid{grid-template-columns:1fr}}
@@ -449,7 +451,8 @@ section.block{padding:100px 0}
 .speed-badge{position:relative;display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;padding:8px 18px 8px 8px;border-radius:999px;
   background:var(--grad);color:#fff;font-family:'Sora','Sora Fallback';font-weight:800;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;
   box-shadow:0 10px 26px rgba(67,97,238,.35),0 0 0 4px rgba(67,97,238,.10);overflow:hidden}
-.speed-badge .sb-ic{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.22);font-size:15px;letter-spacing:0}
+.speed-badge .sb-ic{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.22);font-size:15px;letter-spacing:0;color:#fff}
+.speed-badge .sb-ic svg{width:15px;height:15px}
 .speed-copy .sec-title{text-align:left}
 .speed-copy .sec-lead{margin:0}
 .speed-stats{display:flex;gap:34px;margin-top:28px;flex-wrap:wrap}
@@ -648,7 +651,7 @@ section.block{padding:100px 0}
 footer{background:#0a0126;color:#fff;padding:64px 0 30px}
 /* footer sitemap: brand + 4 link columns */
 .foot-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,3fr);gap:48px}
-.foot-brand img{height:52px;width:auto;display:block}
+.foot-brand img{height:36px;width:auto;display:block}
 .foot-brand p{margin:14px 0 18px;color:#b9bde6;font-size:14px;line-height:1.6;max-width:300px}
 .foot-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.4fr);gap:24px}
 .foot-contact-col a{overflow-wrap:normal;white-space:nowrap}
@@ -700,6 +703,8 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
 .chartbars{display:flex;align-items:flex-end;justify-content:center;gap:22px}
 .cbar{display:flex;flex-direction:column;align-items:center;width:78px;cursor:default}
 .cb-icon{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:23px;box-shadow:0 8px 20px rgba(22,4,70,.14);margin-bottom:10px;transform:translateY(10px) scale(.6);opacity:0;transition:transform .5s cubic-bezier(.34,1.56,.64,1),opacity .5s}
+.cb-icon svg{width:1.05em;height:1.05em;color:var(--accent,#4361ee);fill:currentColor}
+.cb-icon svg circle{fill:#fff}
 .impact-grid.in .cb-icon{transform:translateY(0) scale(1);opacity:1}
 .cb-icon.d1{transition-delay:.12s}.cb-icon.d2{transition-delay:.24s}.cb-icon.d3{transition-delay:.36s}
 .cb-track{position:relative;width:76px;height:288px;overflow:hidden;
@@ -817,7 +822,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
 .deliver-label{font-family:'Sora','Sora Fallback';font-weight:700;font-size:12px;letter-spacing:.18em;color:#9aa0d6;text-transform:uppercase;margin:44px 0 4px;text-align:center}
 .dcard{position:relative;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:30px 26px 24px;display:flex;flex-direction:column;transition:.3s}
 .dcard:hover{transform:translateY(-5px);background:rgba(255,255,255,.065);box-shadow:0 22px 48px rgba(0,0,0,.32)}
-.dcard .dic{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;font-size:26px;margin-bottom:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08)}
+.dcard .dic{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;font-size:26px;margin-bottom:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);color:#9db0ff}
 .dcard h3{font-size:var(--fs-card-title);margin-bottom:10px;color:#fff}
 .dcard p{font-size:var(--fs-card-body);color:#c0c4ea;line-height:var(--lh-body);flex:1}
 .dtag{margin-top:20px;font-family:'Sora','Sora Fallback';font-weight:700;font-size:13px;color:#9db0ff}
@@ -1071,7 +1076,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
   nav{padding:12px 0}
   nav.scrolled{padding:8px 0;background:rgba(13,2,48,.9)}
   .nav-cta{padding:10px 18px;font-size:13.5px;border-radius:999px;white-space:nowrap;flex:none}
-  .nav-logo{height:46px}
+  .nav-logo{height:26px}
 
   /* HERO - balanced, airy */
   #hero{padding:108px 0 58px}
@@ -1188,7 +1193,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
 
   /* nav fits very narrow screens */
   .nav-cta{padding:9px 15px;font-size:13px}
-  .nav-logo{height:46px}
+  .nav-logo{height:26px}
   /* finisher polish */
   .pill{font-size:16.5px;padding:0 6px;text-align:center}
   .finisher .promise{font-size:12px;letter-spacing:.14em}
@@ -1224,7 +1229,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
 
 <nav id="nav" aria-label="Main">
   <div class="wrap nav-in">
-    <a href="#hero" class="nav-home" aria-label="SimpliEd - back to top"><img width="547" height="222" data-ar src="assets/logo.webp" srcset="assets/logo-150.webp 150w, assets/logo-300.webp 300w, assets/logo.webp 547w" sizes="(max-width:860px) 115px, 165px" class="nav-logo" alt="SimpliEd" /></a>
+    <a href="#hero" class="nav-home" aria-label="SimpliEd - back to top"><img width="392" height="88" data-ar src="assets/brand-logo.webp?v=7" srcset="assets/brand-logo-200.webp?v=7 200w, assets/brand-logo.webp?v=7 392w" sizes="(max-width:860px) 116px, 170px" class="nav-logo" alt="SimpliEd" /></a>
     <div class="nav-links">
       <!-- order mirrors the page journey; data-spy = every section that lights up this item -->
       <a href="#why" data-spy="why">Why SimpliEd</a>
@@ -1293,16 +1298,18 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
     <div class="tour-dots" id="tourDots" aria-label="App cards"></div>
     <!-- back phone: static screen, tilted behind-right, appears when zoomed -->
     <div class="back-phone" id="backPhone">
-      <div class="device2"><div class="scr"><img loading="lazy" decoding="async" width="828" height="1868" data-ar src="assets/timetable_scr.webp" srcset="assets/timetable_scr-300.webp 300w, assets/timetable_scr-420.webp 420w, assets/timetable_scr-620.webp 620w, assets/timetable_scr.webp 828w" sizes="(max-width:860px) 78vw, 360px" class="active" alt="Timetable" /></div></div>
+      <div class="device2"><div class="scr"><img loading="lazy" decoding="async" width="786" height="1773" data-ar src="assets/attendance2_scr.webp?v=7" srcset="assets/attendance2_scr-300.webp?v=7 300w, assets/attendance2_scr-420.webp?v=7 420w, assets/attendance2_scr-620.webp?v=7 620w, assets/attendance2_scr.webp?v=7 786w" sizes="(max-width:860px) 78vw, 360px" class="active" alt="Attendance" /><img loading="lazy" decoding="async" width="786" height="1773" data-ar src="assets/curric2_scr.webp?v=7" srcset="assets/curric2_scr-300.webp?v=7 300w, assets/curric2_scr-420.webp?v=7 420w, assets/curric2_scr-620.webp?v=7 620w, assets/curric2_scr.webp?v=7 786w" sizes="(max-width:860px) 78vw, 360px" alt="English curriculum" />
+      <img loading="lazy" decoding="async" width="786" height="1774" data-ar src="assets/compose3_scr.webp?v=7" srcset="assets/compose3_scr-300.webp?v=7 300w, assets/compose3_scr-420.webp?v=7 420w, assets/compose3_scr-620.webp?v=7 620w, assets/compose3_scr.webp?v=7 786w" sizes="(max-width:860px) 78vw, 360px" alt="New message form" /></div></div>
     </div>
     <!-- the ONE phone that zooms and switches screens -->
     <div class="hero-phone2" id="thePhone">
       <div class="reel-glow"></div>
       <div class="device2">
         <div class="scr">
-          <img fetchpriority="high" width="828" height="1868" data-ar src="assets/parent_scr.webp" srcset="assets/parent_scr-300.webp 300w, assets/parent_scr-420.webp 420w, assets/parent_scr-620.webp 620w, assets/parent_scr.webp 828w" sizes="(max-width:860px) 78vw, 360px" class="active" alt="Parent App" />
-          <img loading="lazy" decoding="async" width="828" height="1868" data-ar src="assets/teacher_scr.webp" srcset="assets/teacher_scr-300.webp 300w, assets/teacher_scr-420.webp 420w, assets/teacher_scr-620.webp 620w, assets/teacher_scr.webp 828w" sizes="(max-width:860px) 78vw, 360px" alt="Teacher App" />
-          <img loading="lazy" decoding="async" width="828" height="1868" data-ar src="assets/inbox_scr.webp" srcset="assets/inbox_scr-300.webp 300w, assets/inbox_scr-420.webp 420w, assets/inbox_scr-620.webp 620w, assets/inbox_scr.webp 828w" sizes="(max-width:860px) 78vw, 360px" alt="Smart Inbox" />
+          <img fetchpriority="high" width="786" height="1773" data-ar src="assets/explore2_scr.webp?v=7" srcset="assets/explore2_scr-300.webp?v=7 300w, assets/explore2_scr-420.webp?v=7 420w, assets/explore2_scr-620.webp?v=7 620w, assets/explore2_scr.webp?v=7 786w" sizes="(max-width:860px) 78vw, 360px" alt="Parent App - Explore" />
+          <img loading="lazy" decoding="async" width="786" height="1773" data-ar src="assets/teacher2_scr.webp?v=7" srcset="assets/teacher2_scr-300.webp?v=7 300w, assets/teacher2_scr-420.webp?v=7 420w, assets/teacher2_scr-620.webp?v=7 620w, assets/teacher2_scr.webp?v=7 786w" sizes="(max-width:860px) 78vw, 360px" alt="Teacher App" />
+          <img loading="lazy" decoding="async" width="786" height="1774" data-ar src="assets/inbox3_scr.webp?v=7" srcset="assets/inbox3_scr-300.webp?v=7 300w, assets/inbox3_scr-420.webp?v=7 420w, assets/inbox3_scr-620.webp?v=7 620w, assets/inbox3_scr.webp?v=7 786w" sizes="(max-width:860px) 78vw, 360px" alt="Smart Inbox conversation" />
+          <img decoding="async" width="786" height="1704" data-ar src="assets/parent2_scr.webp?v=7" srcset="assets/parent2_scr-300.webp?v=7 300w, assets/parent2_scr-420.webp?v=7 420w, assets/parent2_scr-620.webp?v=7 620w, assets/parent2_scr.webp?v=7 786w" sizes="(max-width:860px) 78vw, 360px" class="active intro" alt="Parent App" />
         </div>
       </div>
     </div>
@@ -1314,20 +1321,20 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
 <section class="block why" id="why">
   <div class="wrap center">
     <p class="eyebrow reveal">Why SimpliEd</p>
-    <h2 class="sec-title reveal d1">Built by an educator. <span class="grad-text">Engineered for education.</span></h2>
+    <h2 class="sec-title reveal d1">Built by educators. <span class="grad-text">Engineered for education.</span></h2>
     <p class="reveal d1" style="font-family:'Sora','Sora Fallback';font-weight:700;font-size:clamp(18px,2.2vw,24px);color:var(--ink);margin:0 auto 18px;max-width:640px">SimpliEd cleans up <span class="grad-text">messy and cluttered EdTech.</span></p>
     <p class="sec-lead reveal d2">We know the pain of running a school because we have lived it. SimpliEd was designed with academic experience from Harvard and Columbia University, and built for the realities of local institutions.</p>
     <div class="why-marquee reveal d2" id="whyMarquee" role="region" aria-label="SimpliEd features"></div>
     <div class="why-grid">
-      <div class="card reveal"><div class="ic">🎓</div><h3>Educator-first</h3><p>Every workflow is shaped by real classroom and admin experience, not guesswork.</p></div>
-      <div class="card reveal d1"><div class="ic">🧩</div><h3>Truly all-in-one</h3><p>SIS, admissions, billing, teaching, and communication in a single connected platform.</p></div>
-      <div class="card reveal d2"><div class="ic">🏫</div><h3>Multi-branch ready</h3><p>Run every campus from one place with real-time, branch-wise visibility and control.</p></div>
-      <div class="card reveal"><div class="ic">💬</div><h3>WhatsApp, replaced</h3><p>Every parent conversation lives in one secure, monitored, school-owned channel.</p></div>
-      <div class="card reveal d1"><div class="ic">⚡</div><h3>Automated billing</h3><p>State-of-the-art billing auto-matches every payment to the right student and branch.</p></div>
-      <div class="card reveal d2"><div class="ic">🗓️</div><h3>Attendance tracking</h3><p>Mark, monitor, and report attendance in real time, with instant absence alerts to parents.</p></div>
-      <div class="card reveal"><div class="ic">📚</div><h3>User-friendly LMS</h3><p>Lessons, resources, assignments, and grading in one clean interface students and teachers love.</p></div>
-      <div class="card reveal d1"><div class="ic">🧭</div><h3>Curriculum management</h3><p>Plan, structure, and track your entire curriculum, mapped to classes, terms, and learning outcomes.</p></div>
-      <div class="card reveal d2"><div class="ic">🤖</div><h3>AI integration</h3><p>AI-assisted insights and smart automation built into everyday school workflows, so your team spends less time on routine work.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div><h3>Educator-first</h3><p>Every workflow is shaped by real classroom and admin experience, not guesswork.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></div><h3>Truly all-in-one</h3><p>SIS, admissions, billing, teaching, and communication in a single connected platform.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div><h3>Multi-branch ready</h3><p>Run every campus from one place with real-time, branch-wise visibility and control.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>WhatsApp, replaced</h3><p>Every parent conversation lives in one secure, monitored, school-owned channel.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div><h3>Automated billing</h3><p>State-of-the-art billing auto-matches every payment to the right student and branch.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></div><h3>Attendance tracking</h3><p>Mark, monitor, and report attendance in real time, with instant absence alerts to parents.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></div><h3>User-friendly LMS</h3><p>Lessons, resources, assignments, and grading in one clean interface students and teachers love.</p></div>
+      <div class="card reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></div><h3>Curriculum management</h3><p>Plan, structure, and track your entire curriculum, mapped to classes, terms, and learning outcomes.</p></div>
+      <div class="card reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div><h3>AI integration</h3><p>AI-assisted insights and smart automation built into everyday school workflows, so your team spends less time on routine work.</p></div>
     </div>
   </div>
 </section>
@@ -1353,10 +1360,10 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
           <div class="role-phone">
             <div class="roles-glow"></div>
             <div class="device2"><div class="scr">
-              <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/parent_scr.webp" srcset="assets/parent_scr-300.webp 300w, assets/parent_scr-420.webp 420w, assets/parent_scr-620.webp 620w, assets/parent_scr.webp 828w" sizes="(max-width:560px) 180px, 240px" class="active" alt="Parents view" />
-              <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/timetable_scr.webp" srcset="assets/timetable_scr-300.webp 300w, assets/timetable_scr-420.webp 420w, assets/timetable_scr-620.webp 620w, assets/timetable_scr.webp 828w" sizes="(max-width:560px) 180px, 240px" alt="Students view" />
-              <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/teacher_scr.webp" srcset="assets/teacher_scr-300.webp 300w, assets/teacher_scr-420.webp 420w, assets/teacher_scr-620.webp 620w, assets/teacher_scr.webp 828w" sizes="(max-width:560px) 180px, 240px" alt="Teachers view" />
-              <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/inbox_scr.webp" srcset="assets/inbox_scr-300.webp 300w, assets/inbox_scr-420.webp 420w, assets/inbox_scr-620.webp 620w, assets/inbox_scr.webp 828w" sizes="(max-width:560px) 180px, 240px" alt="Admin view" />
+              <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/billing2_scr.webp?v=7" srcset="assets/billing2_scr-300.webp?v=7 300w, assets/billing2_scr-420.webp?v=7 420w, assets/billing2_scr-620.webp?v=7 620w, assets/billing2_scr.webp?v=7 786w" sizes="(max-width:560px) 180px, 240px" class="active" alt="Parents view" />
+              <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/timetable2_scr.webp?v=7" srcset="assets/timetable2_scr-300.webp?v=7 300w, assets/timetable2_scr-420.webp?v=7 420w, assets/timetable2_scr-620.webp?v=7 620w, assets/timetable2_scr.webp?v=7 786w" sizes="(max-width:560px) 180px, 240px" alt="Students view" />
+              <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/gradebook2_scr.webp?v=7" srcset="assets/gradebook2_scr-300.webp?v=7 300w, assets/gradebook2_scr-420.webp?v=7 420w, assets/gradebook2_scr-620.webp?v=7 620w, assets/gradebook2_scr.webp?v=7 786w" sizes="(max-width:560px) 180px, 240px" alt="Teachers view" />
+              <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/admin2_scr.webp?v=7" srcset="assets/admin2_scr-300.webp?v=7 300w, assets/admin2_scr-420.webp?v=7 420w, assets/admin2_scr-620.webp?v=7 620w, assets/admin2_scr.webp?v=7 786w" sizes="(max-width:560px) 180px, 240px" alt="Admin view" />
             </div></div>
           </div>
         </div>
@@ -1405,7 +1412,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
   <div class="wrap">
     <div class="speed-grid">
       <div class="speed-copy">
-        <p class="speed-badge reveal"><span class="sb-ic" aria-hidden="true">⚡</span>Built For Speed</p>
+        <p class="speed-badge reveal"><span class="sb-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>Built For Speed</p>
         <h2 class="sec-title reveal d1">Invoices in seconds. <span class="grad-text">Parents notified instantly.</span></h2>
         <p class="sec-lead reveal d2">Generate fee invoices for a student, a class, or an entire campus in a single click, and every parent receives an instant push notification. No delays, no manual follow-ups.</p>
         <div class="speed-stats reveal d2">
@@ -1423,10 +1430,10 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
       <div class="speed-demo reveal d2">
         <div class="demo-phone" id="demoPhone">
           <div class="device2"><div class="scr">
-            <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/parent_scr.webp" srcset="assets/parent_scr-300.webp 300w, assets/parent_scr-420.webp 420w, assets/parent_scr-620.webp 620w, assets/parent_scr.webp 828w" sizes="(max-width:560px) 190px, 220px" alt="Parent app" />
+            <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/explore2_scr.webp?v=7" srcset="assets/explore2_scr-300.webp?v=7 300w, assets/explore2_scr-420.webp?v=7 420w, assets/explore2_scr-620.webp?v=7 620w, assets/explore2_scr.webp?v=7 786w" sizes="(max-width:560px) 190px, 220px" alt="Parent app" />
             <div class="scrim"></div>
             <div class="notif" id="voucherNotif">
-              <div class="nic"><img src="assets/brand/mark.png" width="96" height="96" alt="" /></div>
+              <div class="nic"><img src="assets/brand/mark.png?v=7" width="96" height="96" alt="" /></div>
               <div class="ntxt">
                 <div class="ntop">SIMPLIED <span>now</span></div>
                 <div class="ntitle">Fee Invoice Generated</div>
@@ -1460,9 +1467,9 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
     <!-- what SimpliEd delivers -->
     <p class="deliver-label reveal">SimpliEd delivers this</p>
     <div class="delivers">
-      <div class="dcard reveal"><div class="dic">📁</div><h3>One platform, full visibility</h3><p>Replaces fragmented tools with a single system across admin, finance, and academics - giving leaders the data to scope and decide.</p><div class="dtag">Scope + Align</div></div>
-      <div class="dcard reveal d1"><div class="dic">⚙️</div><h3>Operational clarity</h3><p>Automates the workflows that drain leadership time - freeing capacity to actually lead change instead of manage chaos.</p><div class="dtag">Shape</div></div>
-      <div class="dcard reveal d2"><div class="dic">🤝</div><h3>Stakeholder engagement built in</h3><p>Parent communication, teacher tools, and student data in one place - so influence isn't just a strategy, it's the system.</p><div class="dtag">Influence + Align</div></div>
+      <div class="dcard reveal"><div class="dic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div><h3>One platform, full visibility</h3><p>Replaces fragmented tools with a single system across admin, finance, and academics - giving leaders the data to scope and decide.</p><div class="dtag">Scope + Align</div></div>
+      <div class="dcard reveal d1"><div class="dic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div><h3>Operational clarity</h3><p>Automates the workflows that drain leadership time - freeing capacity to actually lead change instead of manage chaos.</p><div class="dtag">Shape</div></div>
+      <div class="dcard reveal d2"><div class="dic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Stakeholder engagement built in</h3><p>Parent communication, teacher tools, and student data in one place - so influence isn't just a strategy, it's the system.</p><div class="dtag">Influence + Align</div></div>
     </div>
 
     <p class="reveal d2" style="margin-top:40px;font-family:'Sora','Sora Fallback';font-weight:700;color:#9db0ff;font-size:14px;letter-spacing:.02em">Built for schools navigating the age of AI.</p>
@@ -1525,7 +1532,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
       <div class="impact-chart">
         <div class="chartbars" id="chartBars">
           <div class="cbar up" style="--v:46" data-k="fee" tabindex="0" role="img" aria-label="Fee collection: on-time collection increased by 46 percent">
-            <div class="cb-icon">💰</div>
+            <div class="cb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></div>
             <div class="cb-track"><div class="cb-fill"></div>
               <div class="cb-content">
                 <svg class="cb-arrow" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17 L11 10 L15 14 L21 7"/><path d="M21 12 V7 H16"/></svg>
@@ -1534,7 +1541,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
             </div>
           </div>
           <div class="cbar down" style="--v:53" data-k="it" tabindex="0" role="img" aria-label="IT cost: reduced by 53 percent">
-            <div class="cb-icon">🖥️</div>
+            <div class="cb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
             <div class="cb-track"><div class="cb-fill"></div>
               <div class="cb-content">
                 <svg class="cb-arrow" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7 L11 14 L15 10 L21 17"/><path d="M21 12 V17 H16"/></svg>
@@ -1543,7 +1550,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
             </div>
           </div>
           <div class="cbar down" style="--v:30" data-k="ops" tabindex="0" role="img" aria-label="Operational cost: reduced by 30 percent">
-            <div class="cb-icon">⚙️</div>
+            <div class="cb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></div>
             <div class="cb-track"><div class="cb-fill"></div>
               <div class="cb-content">
                 <svg class="cb-arrow" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7 L11 14 L15 10 L21 17"/><path d="M21 12 V17 H16"/></svg>
@@ -1552,7 +1559,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
             </div>
           </div>
           <div class="cbar up" style="--v:33" data-k="stu" tabindex="0" role="img" aria-label="Students: new enrolments increased by 33 percent">
-            <div class="cb-icon">🎓</div>
+            <div class="cb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
             <div class="cb-track"><div class="cb-fill"></div>
               <div class="cb-content">
                 <svg class="cb-arrow" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17 L11 10 L15 14 L21 7"/><path d="M21 12 V7 H16"/></svg>
@@ -1602,9 +1609,9 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
         <div class="vs-col ours">
           <div class="vs-chip ours-chip">✓ SimpliEd</div>
           <div class="device2 vs-phone"><div class="scr">
-            <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/parent_scr.webp" srcset="assets/parent_scr-300.webp 300w, assets/parent_scr-420.webp 420w, assets/parent_scr-620.webp 620w, assets/parent_scr.webp 828w" sizes="(max-width:560px) 170px, 300px" class="active" alt="SimpliEd app" />
-            <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/inbox_scr.webp" srcset="assets/inbox_scr-300.webp 300w, assets/inbox_scr-420.webp 420w, assets/inbox_scr-620.webp 620w, assets/inbox_scr.webp 828w" sizes="(max-width:560px) 170px, 300px" alt="SimpliEd app" />
-            <img width="828" height="1868" data-ar loading="lazy" decoding="async" src="assets/teacher_scr.webp" srcset="assets/teacher_scr-300.webp 300w, assets/teacher_scr-420.webp 420w, assets/teacher_scr-620.webp 620w, assets/teacher_scr.webp 828w" sizes="(max-width:560px) 170px, 300px" alt="SimpliEd app" />
+            <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/vs1_scr.webp?v=7" srcset="assets/vs1_scr-300.webp?v=7 300w, assets/vs1_scr-420.webp?v=7 420w, assets/vs1_scr-620.webp?v=7 620w, assets/vs1_scr.webp?v=7 786w" sizes="(max-width:560px) 170px, 300px" class="active" alt="SimpliEd app" />
+            <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/vs2_scr.webp?v=7" srcset="assets/vs2_scr-300.webp?v=7 300w, assets/vs2_scr-420.webp?v=7 420w, assets/vs2_scr-620.webp?v=7 620w, assets/vs2_scr.webp?v=7 786w" sizes="(max-width:560px) 170px, 300px" alt="SimpliEd app" />
+            <img width="786" height="1773" data-ar loading="lazy" decoding="async" src="assets/curric2_scr.webp?v=7" srcset="assets/curric2_scr-300.webp?v=7 300w, assets/curric2_scr-420.webp?v=7 420w, assets/curric2_scr-620.webp?v=7 620w, assets/curric2_scr.webp?v=7 786w" sizes="(max-width:560px) 170px, 300px" alt="SimpliEd app" />
           </div></div>
           <div class="vs-caption ours-cap" id="oursCap">Super user friendly</div>
         </div>
@@ -1721,7 +1728,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
 <section class="finisher" id="contact">
   <div class="wrap">
     <p class="promise reveal">The SimpliEd Promise</p>
-    <h2 class="reveal d1"><span class="l1">Built by an Educator.</span><br><span class="l2">Engineered for Education.</span><br><span class="l3">Designed for What's Next.</span></h2>
+    <h2 class="reveal d1"><span class="l1">Built by Educators.</span><br><span class="l2">Engineered for Education.</span><br><span class="l3">Designed for What's Next.</span></h2>
     <div class="uline reveal d2"></div>
     <div class="pill reveal d2">Yes, we're premium. Because we care, premium.</div>
     <div class="fcta reveal d3">
@@ -1796,6 +1803,10 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
         <ul class="ct-direct">
           <li><a href="mailto:info@simpliedtech.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@simpliedtech.com</a></li>
           <li><a href="tel:+923317734499"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>+92 331 7734499</a></li>
+          <!--
+          <li><a href="tel:+923317734499"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>+92 331 7734499</a></li>
+          <li><a href="tel:+923092442950"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>+92 309 2442950</a></li>
+          -->
         </ul>
       </aside>
 
@@ -1840,8 +1851,8 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img width="547" height="222" data-ar loading="lazy" decoding="async" src="assets/logo.webp" srcset="assets/logo-150.webp 150w, assets/logo-300.webp 300w, assets/logo.webp 547w" sizes="128px" alt="SimpliEd" />
-        <p>The all-in-one school operating system for modern schools. Built by an educator, engineered for education.</p>
+        <img width="392" height="88" data-ar loading="lazy" decoding="async" src="assets/brand-logo.webp?v=7" srcset="assets/brand-logo-200.webp?v=7 200w, assets/brand-logo.webp?v=7 392w" sizes="150px" alt="SimpliEd" />
+        <p>The all-in-one school operating system for modern schools. Built by educators, engineered for education.</p>
       </div>
       <div class="foot-nav" role="navigation" aria-label="Footer">
         <div class="foot-col"><h2>Product</h2>
@@ -1851,7 +1862,7 @@ footer{background:#0a0126;color:#fff;padding:64px 0 30px}
         <div class="foot-col"><h2>Customers</h2>
           <a href="#trust">Our clients</a><a href="#testimonials">Customer stories</a><a href="#versus">Compare</a></div>
         <div class="foot-col foot-contact-col"><h2>Contact</h2>
-          <a href="#get-in-touch">Contact us</a><a href="mailto:info@simpliedtech.com">info@simpliedtech.com</a><a href="tel:+923317734499">+92 331 7734499</a><a href="https://www.simpliedtech.com">www.simpliedtech.com</a></div>
+          <a href="#get-in-touch">Contact us</a><a href="mailto:info@simpliedtech.com">info@simpliedtech.com</a><a href="tel:+923317734499">+92 331 7734499</a><!-- <a href="tel:+923317734499">+92 331 7734499</a><a href="tel:+923092442950">+92 309 2442950</a> --></div>
       </div>
     </div>
     <div class="foot-bar"><span>© 2026 SimpliEd. Built For Educators, By Educators.</span><span class="foot-legal-links"><a href="https://www.simpliedtech.com/privacy-policy.html" class="foot-legal">Privacy Policy</a><a href="https://www.simpliedtech.com/terms-and-conditions.html" class="foot-legal">Terms and Conditions</a></span></div>
@@ -2176,10 +2187,13 @@ document.querySelectorAll('.count').forEach(el=>co.observe(el));
   const intro=document.getElementById('heroCopy');
   const hint=document.getElementById('scrollHint');
   const back=document.getElementById('backPhone');
+  const backImgs=back?[...back.querySelectorAll('img')]:[];
   const clamp=(v,a,b)=>Math.min(Math.max(v,a),b);
   function upd(){
     if(getComputedStyle(hero).height==='auto' || innerWidth<=860){ // mobile: static
-      if(phone) phone.style.transform=''; if(intro) intro.style.opacity=''; return;
+      if(phone) phone.style.transform=''; if(intro) intro.style.opacity='';
+      if(imgs[3]&&imgs[3].classList.contains('active')){imgs[3].classList.remove('active'); imgs[0].classList.add('active');}   // phones: no intro screen, tour cards drive the phone
+      return;
     }
     const rect=hero.getBoundingClientRect();
     const total=hero.offsetHeight-innerHeight;
@@ -2194,9 +2208,11 @@ document.querySelectorAll('.count').forEach(el=>co.observe(el));
     if(tour) tour.style.opacity=clamp((p-0.08)/0.05,0,1).toFixed(3);
     if(hint) hint.style.opacity=(p<0.04?0.8:0);
     if(back) back.classList.toggle('out', p>0.14 && p<0.92);   // emerge from behind, tilt out; tuck back on exit
-    const idx = p<0.30?0 : p<0.60?1 : 2;            // parent -> teacher -> inbox
-    imgs.forEach((im,i)=>im.classList.toggle('active',i===idx));
+    const idx = p<0.30?0 : p<0.60?1 : 2;            // parent -> teacher -> inbox (copy)
+    const shot = p<0.10?3 : idx;                     // 3 = intro screen (first screen, before the tour copy shows)
+    imgs.forEach((im,i)=>im.classList.toggle('active',i===shot));
     slides.forEach((sl,i)=>sl.classList.toggle('active',i===idx));
+    backImgs.forEach((im,i)=>im.classList.toggle('active',i===idx));   // back phone follows the step: Attendance, Curriculum, New message
   }
   addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd,{passive:true});upd();
 })();
@@ -2645,6 +2661,6 @@ document.querySelectorAll('.count').forEach(el=>co.observe(el));
     aiEndpoint: '/api/chat'  // AI assistant backend (simplied-server). If it isn't running, the chat uses its built-in answers.
   };
 </script>
-<script src="assets/chatbot.js" defer></script>
+<script src="assets/chatbot.js?v=7" defer></script>
 </body>
 </html>
