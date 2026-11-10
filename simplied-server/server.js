@@ -80,6 +80,8 @@ function serveStatic(req, res, pathname) {
   if (rel.endsWith('/')) rel += 'index.html';
   const file = path.resolve(CFG.siteDir, '.' + rel);
   if (!file.startsWith(CFG.siteDir + path.sep) || /(^|[\\/])\./.test(path.relative(CFG.siteDir, file))) return send(res, 404, 'Not found');
+  // clean URLs: /terms-and-conditions serves terms-and-conditions.html
+  if (!path.extname(file)) { const alt = file + '.html'; if (fs.existsSync(alt)) return serveStatic(req, res, pathname + '.html'); }
   fs.stat(file, (err, st) => {
     if (err || !st.isFile()) return send(res, 404, 'Not found');
     const ae = String(req.headers['accept-encoding'] || '');

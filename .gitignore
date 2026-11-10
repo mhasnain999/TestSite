@@ -6,3 +6,6 @@
 !simplied-qa/tools/node_modules/
 simplied-qa/out/
 *.log
+# deployment bundles are built locally, never committed
+*.tar
+.DS_Store

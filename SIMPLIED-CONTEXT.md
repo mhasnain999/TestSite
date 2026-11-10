@@ -7,7 +7,7 @@ The marketing website for **SimpliEd**, an all-in-one school operating system (s
 
 | Folder | Purpose |
 |---|---|
-| `simplied-site/` | The website. **One page**: `index.html` with inline CSS and JS (~2,600 lines), plus `assets/`. No build step, no framework. |
+| `simplied-site/` | The website. Main page `index.html` (inline CSS and JS, ~2,600 lines), plus two legal pages `terms-and-conditions.html` and `privacy-policy.html` (same nav and footer, standalone inline CSS, no Pakistan/em dash), plus `assets/`. The server also serves them at `/terms-and-conditions` and `/privacy-policy`. No build step, no framework. |
 | `simplied-site/assets/chatbot.js`, `chatbot.css` | The website chatbot (no dependencies). Its setup guide is `assets/README-chatbot.md`. |
 | `simplied-server/` | Node server (no dependencies): serves the site (with brotli/gzip compression) plus `POST /api/chat` (the AI assistant: Gemini, rules-engine fallback). See its `README.md`. 44 tests: `npm test`. |
 | `simplied-qa/` | Playwright QA scripts and how to run them. See its `README.md`. |
@@ -51,9 +51,9 @@ The nav (`#nav`) holds: Why SimpliEd · Product · Approach · Impact · Compare
     - The card must fit one screen at 1024×768 and larger.
     - Without a backend the form opens a pre-filled `mailto:` and honestly says "Press Send". If `window.SIMPLIED_CHAT.leadEndpoint` is set, it POSTs instead.
     - Every "Book a Demo" link goes here and preselects "Book a demo" (`data-ct="demo"`).
-14. **Footer**: brand, four link columns, the © line, and **Privacy Policy** (https://www.simpliedtech.com/privacy-policy.html) and **Terms and Conditions** (https://www.simpliedtech.com/terms-and-conditions.html).
+14. **Footer**: brand, four link columns, the © line, and **Privacy Policy** (`privacy-policy.html`) and **Terms and Conditions** (`terms-and-conditions.html`), both local pages.
 
-Contact details used everywhere: **info@simpliedtech.com**, **+92 331 7734499**.
+Contact details used everywhere: **info@simpliedtech.com**, **+92 331 7734499** (WhatsApp), **+1 401 598 2498** (international).
 
 ## Design rules (the user's preferences, all confirmed)
 - The style is **classic, clean, premium**.
@@ -108,7 +108,7 @@ Contact details used everywhere: **info@simpliedtech.com**, **+92 331 7734499**.
 - Phone-screen images are the `*2_scr`/`*3_scr` webp sets in `assets/` (hero, roles: Billing/Timetable/Gradebook/Admin, Built for Speed: Explore, Compare: Attendance/Inbox/Curriculum), padded (not cropped) to the phone aspect 0.4432.
 - Why SimpliEd (`#why`) nine cards and Approach (`#transform`) "SimpliEd delivers this" cards use inline Lucide-style line SVGs (the mobile app uses `lucide_icons`), not emoji.
 - Header and footer use the white logo `assets/brand-logo.webp`.
-- The only visible phone number is **+92 331 7734499** (contact card and footer). The landline and +92 309 2442950 are commented out in the HTML. www.simpliedtech.com was removed from the footer.
+- Visible phone numbers: **+92 331 7734499** is the team's **WhatsApp** number (every link goes to `https://wa.me/923317734499`, WhatsApp icon in the contact card, "(WhatsApp)" in the footers, chatbot buttons say "WhatsApp"); **+1 401 598 2498** is for international clients (`tel:` link). The landline and +92 309 2442950 are commented out in the HTML. www.simpliedtech.com was removed from the footer.
 - `simplied-caprover.tar` (repo root) is the CapRover bundle; rebuild it after edits.
 
 ## Open items / not done
